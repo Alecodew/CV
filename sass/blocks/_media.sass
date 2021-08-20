@@ -22,6 +22,13 @@
     .skills
         &__wrapper
             justify-content: center
+    .contacts
+        &__wrapper
+            padding: 0
+            grid-template-columns: 400px 520px
+        &__form
+            grid-template: 45px 190px 45px / repeat(2,250px)
+
 @media (max-width: 992px)
     .container
         max-width: 720px
@@ -41,9 +48,17 @@
             grid-template-columns: repeat(2, 300px)
             column-gap: 50px
 
-    .skills
+    .contacts
         &__wrapper
-
+            padding: 0
+            grid-template-columns: 300px 400px
+        &__form
+            grid-template: 45px 190px 45px / repeat(2,190px)
+        &__btn
+            padding: 8px 25px
+            line-height: 14px
+            font-size: 12px
+            font-weight: $fw-regular
     .title
         &_fz36
             font-size: 30px
@@ -88,7 +103,14 @@
             &-subtitle
             &-text
                 max-width: none
-
+    .contacts
+        padding-top: 40px
+        &__wrapper
+            grid-template-columns: 1fr
+        &__photo
+            display: none
+        &__form
+            grid-template: 45px 190px 45px / repeat(2,250px)
 @media (max-width: 576px)
     .container
         max-width: 100%
@@ -99,7 +121,6 @@
         &__block
             width: 250px
             padding-left: 20px
-
     .promo
         &__btns
             margin-top: 30px
@@ -111,7 +132,6 @@
                     font-size: 14px
                 &_fz36
                     font-size: 24px
-
         &__skills
             grid-template-columns: 1fr
     .title
@@ -124,6 +144,26 @@
             padding-top: 20px
             grid-template: 1fr/1fr
     .skills
-
         &__wrapper
             padding-top: 20px
+    .contacts
+        padding-bottom: 20px
+        &__wrapper
+        &__form
+            grid-template: 45px 45px 190px minmax(45px,auto)/1fr
+        &__textarea
+            grid-column: unset
+            width: 100%
+        &__triggers
+            grid-column: unset
+            grid-template-columns: 1fr
+            column-gap: unset
+            row-gap: 20px
+        &__btn
+            order: 2
+            min-width: 220px
+            margin: 0 auto
+        &__policy
+            max-width: 200px
+            margin: 0 auto
+            line-height: 20px
