@@ -1,0 +1,69 @@
+.portfolio
+    padding-top: 120px
+    &__title
+        text-align: center
+        @include before_circle
+        position: relative
+        &::before
+            left: 50%
+            transform: translateX(-50%)
+    &__subtitle
+        text-align: center
+    &__wrapper
+        padding-top: 60px
+        display: flex
+        justify-content: space-between
+    &__card
+        border: 1px solid #000
+        width: 500px
+        height: 500px
+        position: relative
+        &:hover .portfolio__content
+            opacity: 1
+
+        &-photo
+            width: 100%
+            height: 100%
+
+            img
+                display: block
+                width: 100%
+                height: 100%
+                object-fit: cover
+
+    &__content
+        opacity: 0
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        display: flex
+        flex-direction: column
+        justify-content: center
+        text-align: center
+        transition: opacity 0.3s linear
+        background-color: rgba(0, 0, 0, 0.7)
+
+        &-title
+            flex-basis: 100px
+            font-size: 36px
+            line-height: 18px
+            font-weight: $fw-bold
+            color: #fff
+
+        &-text
+            flex-basis: 170px
+            width: 100%
+            padding: 0 20px 0 20px
+            font-size: 24px
+            line-height: 22px
+            font-weight: $fw-regular
+            color: #fff
+        &-btns
+            a
+                text-decoration: none
+                font-weight: $fw-bold
+                font-size: 16px
+                line-height: 14px
+                color: #000
